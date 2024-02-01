@@ -1,0 +1,40 @@
+<html>
+
+<body>
+
+    <input type="text" id="txt"><input type="button" value="mais" onclick="busca()">
+
+    <div id='vaca'></div>
+    
+    <div id='boi'></div>
+    
+    <div id='porco'></div>
+    
+    <div id='galinha'></div>
+
+</body>
+
+<script>
+   function busca() {
+
+var str = document.getElementById('txt').value;
+var obj = document.getElementsByTagName('div');
+var existe = false;
+
+for (var i = 0; i < obj.length; i++) {
+  if (obj[i].id == str) {
+    existe = true;
+    break;
+  }
+}
+
+if (existe) {
+  alert('existe sim');
+} else {
+  alert('não existe');
+}
+
+}
+</script>
+
+</html>
